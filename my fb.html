@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My personal fb</title>  
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+
+        .header .fas{
+            color: gold;
+        }
+        .headar{
+            background-color: #367cf7;
+           height: 40pz;
+           padding-left: 200px;
+           line-height: 40px;
+        }
+        input{
+            height: 20px;
+        }
+        .main-content{
+            margin-left: 200px;
+            width: 849px;
+        }
+        .cover{
+            background-image: url('cover.jpg');
+            background-size: 849px 313px;
+            height: 313px;
+            border: 0.5px solid gray;
+        }
+        .profile-pic{
+            background-image: url("profile pic.jpg");
+            background-size: 160px 160px;
+            height: 160px;
+            width: 160px;
+            position: relative;
+            top: 180px;
+            left:15px;
+        }
+        .timeline-post{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+ <div class="headar">
+        <i class="fab fa-facebook-f"></i>
+
+        <input type="text" placeholder ="shovon khondokar">
+        <span>Home</span>
+        <samp>
+               <i class="fas fa-globe"></i>
+                <i class="fas fa-bell"></i>
+        </samp>
+ </div>
+ <div class="main-content">
+     <div class="cover">
+         <div class="profile-pic"></div> 
+     </div>
+         <div class="timeline-post">
+             <textarea id="status" placeholder="what`s on your mind?" name="" id="" cols="70" rows="4"></textarea>
+             <br>
+             <button onclick="poststatus()" class=" btn btn-success">post</button>
+             <div id="posts"></div>
+         </div> 
+ </div>
+ <script>
+     function poststatus(){
+         var textelement = document.getElementById('status');
+         var status = textelement.value;
+
+         var postcontiner = document.getElementById('posts');
+         postcontiner.append(status);
+     }
+ </script>
+</body>
+</html>
